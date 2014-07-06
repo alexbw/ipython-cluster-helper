@@ -402,7 +402,7 @@ def _queue_can_access_pe(pe_name, queue):
 
 def _has_parallel_environment(line):
     if line.startswith("allocation_rule"):
-        if line.find("$pe_slots") >= 0 or line.find("$fill_up") >= 0:
+        if line.find("$pe_slots") >= 0 or line.find("$fill_up") >= 0 or line.find("$round_robin") >= 0:
                 return True
     return False
 
